@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://eg00aabwon5u"]
+
+[ext_resource type="FontFile" uid="uid://bsbm2lmihggbu" path="res://assets/fonts/mi_fuente.ttf" id="1_k822g"]
+
+[resource]
+default_font = ExtResource("1_k822g")

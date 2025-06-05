@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqlbjb0bxbg64"]
+
+[ext_resource type="Script" uid="uid://b3r23041bl12k" path="res://scripts/final.gd" id="1_op64y"]
+[ext_resource type="Texture2D" uid="uid://bd4xgkru3r4m4" path="res://assets/37fac693-67cc-45bb-a0c8-8b762c921273.png" id="2_gh6hq"]
+[ext_resource type="Theme" uid="uid://eg00aabwon5u" path="res://assets/themes/heme_global.tres" id="3_y0die"]
+
+[node name="control" type="CanvasLayer"]
+script = ExtResource("1_op64y")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -10.0
+offset_top = -28.0
+offset_right = 1322.0
+offset_bottom = 794.0
+texture = ExtResource("2_gh6hq")
+expand_mode = 1
+
+[node name="BotonMe" type="Button" parent="."]
+offset_left = 162.0
+offset_top = 518.0
+offset_right = 470.0
+offset_bottom = 678.0
+text = "MENU PRINCIPAL"
+
+[node name="BotonSali" type="Button" parent="."]
+offset_left = 778.0
+offset_top = 506.0
+offset_right = 1086.0
+offset_bottom = 666.0
+text = "SALIR "
+
+[node name="mensajefi" type="Label" parent="."]
+offset_left = 358.0
+offset_top = 158.0
+offset_right = 943.0
+offset_bottom = 475.0
+theme = ExtResource("3_y0die")
+text = "\"¡Has derrotado a Don Rico!\"
+ \"¡Felicidades, ganaste el juego!\"."
+horizontal_alignment = 1

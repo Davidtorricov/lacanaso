@@ -1,0 +1,337 @@
+[gd_scene load_steps=14 format=3 uid="uid://bw0sq4hm2fyfp"]
+
+[ext_resource type="Theme" uid="uid://eg00aabwon5u" path="res://assets/themes/heme_global.tres" id="1_0qy8o"]
+[ext_resource type="Script" uid="uid://efkhirvg0fac" path="res://scripts/Combat.gd" id="2_akg4l"]
+[ext_resource type="Texture2D" uid="uid://dperr4yp7pep4" path="res://assets/0a4590dd-32c6-4e6c-af9a-4556e6a074ab.png" id="2_tp2sa"]
+[ext_resource type="Texture2D" uid="uid://b5tlkdf7p6ipp" path="res://assets/ChatGPT Image 24 may 2025, 01_42_09 p.m..png" id="4_70oqa"]
+[ext_resource type="Texture2D" uid="uid://byl0u3qjhnb4p" path="res://assets/Fondo de Fondo de ChatGPT Image 24 may 2025, 01_42_21 p.m. eliminado eliminado.png" id="4_acsaf"]
+[ext_resource type="Texture2D" uid="uid://div4d6cqg0ln" path="res://assets/b603ede8-d023-4438-9c7a-a71160c70145.png" id="6_70oqa"]
+[ext_resource type="Texture2D" uid="uid://cvd4avrai3qrf" path="res://assets/667c1651-a331-436e-956a-caf2d59d2323.png" id="7_mak3c"]
+[ext_resource type="Texture2D" uid="uid://deltycl0djru6" path="res://assets/8da4fe9d-fde2-472a-9078-324326b838b0.png" id="8_3q7sh"]
+[ext_resource type="Texture2D" uid="uid://uioxl6ybr2td" path="res://assets/5132beca-fd17-4420-9cbe-c21c7c1a447a.png" id="9_spaix"]
+[ext_resource type="Texture2D" uid="uid://pa5d0v84q0f5" path="res://assets/Fondo de Captura de pantalla 2025-05-26 a la(s) 9.32.22 p.m. eliminado.png" id="10_acsaf"]
+[ext_resource type="Texture2D" uid="uid://w5e45pwmwd45" path="res://assets/Fondo de Captura de pantalla 2025-05-26 a la(s) 9.32.41 p.m. eliminado.png" id="11_x8jxt"]
+[ext_resource type="Texture2D" uid="uid://bhfdyr65v3nbd" path="res://assets/Fondo de Captura de pantalla 2025-05-26 a la(s) 9.32.54 p.m. eliminado.png" id="12_132iy"]
+[ext_resource type="Texture2D" uid="uid://t0uxtsxvj5vm" path="res://assets/Fondo de Captura de pantalla 2025-05-26 a la(s) 9.33.00 p.m. eliminado.png" id="13_qjsle"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_0qy8o")
+script = ExtResource("2_akg4l")
+
+[node name="FondoCombate" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -22.0
+offset_top = -15.0
+offset_right = 1274.0
+offset_bottom = 745.0
+texture = ExtResource("2_tp2sa")
+expand_mode = 1
+flip_h = true
+flip_v = true
+
+[node name="Label" type="Label" parent="FondoCombate"]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 669.0
+offset_right = 1108.0
+offset_bottom = 1035.0
+text = "el enemigo se planta con 15 no le gusta tomar riesgos "
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InfoJugador" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 64.0
+offset_top = 38.0
+offset_right = 373.0
+offset_bottom = 251.0
+theme = ExtResource("1_0qy8o")
+
+[node name="AvatarJugador" type="TextureRect" parent="UI/InfoJugador"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+offset_top = -7.0
+offset_right = 315.0
+offset_bottom = 196.0
+texture = ExtResource("4_acsaf")
+expand_mode = 1
+
+[node name="Overlay" type="Control" parent="UI/InfoJugador"]
+anchors_preset = 0
+offset_left = 25.0
+offset_top = 28.0
+offset_right = 299.0
+offset_bottom = 180.0
+
+[node name="VidaIcono" type="TextureRect" parent="UI/InfoJugador/Overlay"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.179
+anchor_bottom = 0.159
+offset_left = 93.0
+offset_top = 42.0
+offset_right = 115.083
+offset_bottom = 57.535
+
+[node name="saludj" type="Label" parent="UI/InfoJugador/Overlay"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 23.0
+offset_right = 272.0
+offset_bottom = 106.0
+text = "\"salud\""
+
+[node name="fichas" type="Label" parent="UI/InfoJugador/Overlay"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 48.0
+offset_right = 271.0
+offset_bottom = 131.0
+text = "\"fichas\""
+
+[node name="VidaLabel" type="Label" parent="UI/InfoJugador/Overlay"]
+layout_mode = 2
+offset_left = 223.0
+offset_top = 22.0
+offset_right = 509.0
+offset_bottom = 45.0
+text = "10"
+
+[node name="FichasIcono" type="TextureRect" parent="UI/InfoJugador/Overlay"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 79.0
+offset_right = 144.0
+offset_bottom = 119.0
+
+[node name="FichasLabel" type="Label" parent="UI/InfoJugador/Overlay"]
+layout_mode = 2
+offset_left = 234.0
+offset_top = 50.0
+offset_right = 549.0
+offset_bottom = 73.0
+text = "0"
+
+[node name="InfoEnemigo" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 868.0
+offset_top = 38.0
+offset_right = 1210.0
+offset_bottom = 275.0
+theme = ExtResource("1_0qy8o")
+
+[node name="AvatarEnemigo" type="TextureRect" parent="UI/InfoEnemigo"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = -11.0
+offset_right = 323.0
+offset_bottom = 193.0
+texture = ExtResource("4_70oqa")
+expand_mode = 1
+flip_h = true
+
+[node name="Overlay" type="Control" parent="UI/InfoEnemigo"]
+anchors_preset = 0
+offset_left = 39.0
+offset_top = 14.0
+offset_right = 313.0
+offset_bottom = 164.0
+
+[node name="VidaIcono" type="TextureRect" parent="UI/InfoEnemigo/Overlay"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 84.0
+offset_right = 101.0
+offset_bottom = 121.0
+
+[node name="VidaLabel" type="Label" parent="UI/InfoEnemigo/Overlay"]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 25.0
+offset_right = 457.0
+offset_bottom = 53.0
+text = "30\""
+
+[node name="FichasLabel" type="Label" parent="UI/InfoEnemigo/Overlay"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 51.0
+offset_right = 167.0
+offset_bottom = 81.0
+text = "fichas 100
+"
+
+[node name="FichasIcono" type="TextureRect" parent="UI/InfoEnemigo/Overlay"]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 95.0
+offset_right = 140.0
+offset_bottom = 135.0
+
+[node name="salud" type="Label" parent="UI/InfoEnemigo/Overlay"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 26.0
+offset_right = 362.0
+offset_bottom = 239.0
+text = "\"salud\""
+
+[node name="ZonaEnemigo" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 799.0
+offset_top = 302.0
+offset_right = 1209.3
+offset_bottom = 682.0
+
+[node name="MazoTapa" type="TextureRect" parent="UI/ZonaEnemigo"]
+layout_mode = 2
+offset_left = 219.0
+offset_top = 179.0
+offset_right = 369.0
+offset_bottom = 383.0
+texture = ExtResource("6_70oqa")
+expand_mode = 1
+
+[node name="CartasEnemigo" type="HBoxContainer" parent="UI/ZonaEnemigo"]
+layout_mode = 2
+offset_left = 3.0
+offset_top = 47.0
+offset_right = 403.0
+offset_bottom = 187.0
+alignment = 2
+
+[node name="ZonaJugador" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 55.0
+offset_top = 297.0
+offset_right = 465.0
+offset_bottom = 677.0
+
+[node name="CartasJugador" type="HBoxContainer" parent="UI/ZonaJugador"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 47.0
+offset_right = 408.0
+offset_bottom = 187.0
+
+[node name="MazoTapa" type="TextureRect" parent="UI/ZonaJugador"]
+layout_mode = 2
+offset_left = 30.0
+offset_top = 188.0
+offset_right = 172.0
+offset_bottom = 381.0
+texture = ExtResource("7_mak3c")
+expand_mode = 1
+
+[node name="BotonesJuego" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 498.0
+offset_top = 296.0
+offset_right = 841.0
+offset_bottom = 653.0
+theme = ExtResource("1_0qy8o")
+
+[node name="BotonPedir" type="Button" parent="UI/BotonesJuego"]
+layout_mode = 2
+offset_left = 27.0
+offset_top = 6.0
+offset_right = 1571.0
+offset_bottom = 1038.0
+scale = Vector2(0.12, 0.12)
+icon = ExtResource("9_spaix")
+
+[node name="BotonPlantarse" type="Button" parent="UI/BotonesJuego"]
+layout_mode = 2
+offset_left = 25.0
+offset_top = 148.0
+offset_right = 1569.0
+offset_bottom = 1180.0
+scale = Vector2(0.13, 0.13)
+icon = ExtResource("8_3q7sh")
+
+[node name="MensajeCentral" type="Label" parent="UI"]
+offset_left = 417.0
+offset_top = 200.0
+offset_right = 825.0
+offset_bottom = 312.0
+theme = ExtResource("1_0qy8o")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fichasjgd" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 64.0
+offset_right = 534.0
+offset_bottom = 173.0
+texture = ExtResource("10_acsaf")
+
+[node name="fichasjgd2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 52.0
+offset_right = 461.0
+offset_bottom = 191.0
+texture = ExtResource("11_x8jxt")
+
+[node name="fichasjgd3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 139.0
+offset_right = 519.0
+offset_bottom = 248.0
+texture = ExtResource("10_acsaf")
+
+[node name="fichasjgd4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 155.0
+offset_right = 444.0
+offset_bottom = 264.0
+texture = ExtResource("10_acsaf")
+
+[node name="fichasenemi" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 136.0
+offset_right = 938.0
+offset_bottom = 239.0
+texture = ExtResource("12_132iy")
+
+[node name="fichasenemi2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 692.0
+offset_top = 52.0
+offset_right = 824.0
+offset_bottom = 160.0
+texture = ExtResource("12_132iy")
+
+[node name="fichasenemi4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 121.0
+offset_right = 842.0
+offset_bottom = 227.0
+texture = ExtResource("12_132iy")
+
+[node name="fichasenemi3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 769.0
+offset_top = 36.0
+offset_right = 903.0
+offset_bottom = 170.0
+texture = ExtResource("13_qjsle")
+
+[node name="saludj2" type="Label" parent="."]
+layout_mode = 0
+offset_right = 69.0
+offset_bottom = 35.0

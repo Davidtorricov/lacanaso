@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp78o5jl6eqbd"]
+
+[ext_resource type="Texture2D" uid="uid://b7s8q0pls43bf" path="res://assets/PARTIDAPANTALLA.png" id="1_elqb8"]
+[ext_resource type="Script" uid="uid://cjmrpsdqqqkvj" path="res://scripts/HUD.gd" id="2_0bbpv"]
+[ext_resource type="Theme" uid="uid://eg00aabwon5u" path="res://assets/themes/heme_global.tres" id="2_rarhs"]
+
+[sub_resource type="Theme" id="Theme_rarhs"]
+
+[node name="Main" type="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(656, 363)
+scale = Vector2(0.850912, 0.78125)
+texture = ExtResource("1_elqb8")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 6.0
+offset_right = -4.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_rarhs")
+script = ExtResource("2_0bbpv")
+
+[node name="VidaLabel" type="Label" parent="HUD"]
+light_mask = 133
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = -1.0
+offset_top = 592.0
+offset_right = 486.0
+offset_bottom = 830.0
+theme_override_font_sizes/font_size = 37
+text = "Vida: 100"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="FichasLabel" type="Label" parent="HUD"]
+light_mask = 133
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = -63.0
+offset_top = 638.0
+offset_right = 510.0
+offset_bottom = 750.0
+theme_override_font_sizes/font_size = 34
+text = "Fichas: 0"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="MazosHBox" type="HBoxContainer" parent="HUD"]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 63.0
+offset_right = 1038.0
+offset_bottom = 648.0
+theme = SubResource("Theme_rarhs")
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 64.0
+offset_right = 998.0
+offset_bottom = 211.0
+text = "MAZOS DISPONIBLES"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="boton diamante" type="Button" parent="HUD"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 227.0
+offset_right = 351.0
+offset_bottom = 453.0
+
+[connection signal="pressed" from="HUD/boton diamante" to="HUD" method="_on_boton_diamante_pressed"]

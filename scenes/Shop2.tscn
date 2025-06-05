@@ -1,0 +1,135 @@
+[gd_scene load_steps=7 format=3 uid="uid://bdv01v83yydxy"]
+
+[ext_resource type="Theme" uid="uid://eg00aabwon5u" path="res://assets/themes/heme_global.tres" id="1_db1vg"]
+[ext_resource type="Script" uid="uid://jcalvagxc715" path="res://scripts/shop_2.gd" id="2_db1vg"]
+[ext_resource type="Texture2D" uid="uid://bqrie57iacrpo" path="res://assets/5d73e619-7e29-4a06-b5d7-224f8fbfcc52.png" id="3_hl8hd"]
+[ext_resource type="Texture2D" uid="uid://cnh41tsf3b2tb" path="res://assets/ChatGPT Image 4 jun 2025, 12_21_18 p.m..png" id="4_f1r6x"]
+[ext_resource type="Texture2D" uid="uid://btamench2oddq" path="res://assets/ChatGPT Image 4 jun 2025, 12_21_23 p.m..png" id="5_uk63h"]
+[ext_resource type="Texture2D" uid="uid://dvpvkix51scnh" path="res://assets/830e95cf-d4bd-47e0-87dc-00aeb0629060.png" id="6_dtdnd"]
+
+[node name="Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_db1vg")
+script = ExtResource("2_db1vg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = -110.0
+offset_top = -304.0
+offset_right = 1275.0
+offset_bottom = 720.0
+texture = ExtResource("3_hl8hd")
+
+[node name="PanelPrincipal" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1277.0
+offset_bottom = 674.0
+
+[node name="vida" type="Label" parent="PanelPrincipal"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 0
+offset_left = -179.0
+offset_top = 40.0
+offset_right = 336.0
+offset_bottom = 204.0
+text = "vida"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="fichas" type="Label" parent="PanelPrincipal"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 0
+offset_left = -180.0
+offset_top = 91.0
+offset_right = 335.0
+offset_bottom = 255.0
+text = "fichas"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="VidaLabel" type="Label" parent="PanelPrincipal"]
+layout_mode = 2
+offset_left = 118.0
+offset_top = 42.0
+offset_right = 431.0
+offset_bottom = 153.0
+
+[node name="FichasLabel" type="Label" parent="PanelPrincipal"]
+layout_mode = 2
+offset_left = 144.0
+offset_top = 95.0
+offset_right = 264.0
+offset_bottom = 128.0
+
+[node name="MensajeLabel" type="Label" parent="PanelPrincipal"]
+layout_mode = 2
+offset_left = 306.0
+offset_top = 89.0
+offset_right = 862.0
+offset_bottom = 210.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ComprarVida" type="Button" parent="PanelPrincipal"]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 261.0
+offset_right = 476.0
+offset_bottom = 499.0
+icon = ExtResource("4_f1r6x")
+expand_icon = true
+
+[node name="c" type="Label" parent="PanelPrincipal/ComprarVida"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 235.0
+offset_right = 148.0
+offset_bottom = 294.0
+text = "\"costo 3\""
+
+[node name="ComprarDanoX2" type="Button" parent="PanelPrincipal"]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 261.0
+offset_right = 664.0
+offset_bottom = 493.0
+icon = ExtResource("5_uk63h")
+expand_icon = true
+
+[node name="c" type="Label" parent="PanelPrincipal/ComprarDanoX2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 233.0
+offset_right = 143.0
+offset_bottom = 276.0
+text = "\"costo 5\""
+
+[node name="ComprarEscudo" type="Button" parent="PanelPrincipal"]
+layout_mode = 0
+offset_left = 696.0
+offset_top = 262.0
+offset_right = 854.0
+offset_bottom = 494.0
+icon = ExtResource("6_dtdnd")
+expand_icon = true
+
+[node name="c" type="Label" parent="PanelPrincipal/ComprarEscudo"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 233.0
+offset_right = 149.0
+offset_bottom = 276.0
+text = "\"costo 4\""
+
+[node name="BotonSalir" type="Button" parent="PanelPrincipal"]
+layout_mode = 2
+offset_left = 1042.0
+offset_top = 572.0
+offset_right = 1270.0
+offset_bottom = 721.0
+localize_numeral_system = false
+keep_pressed_outside = true
+text = "\"Continuar\""
+
+[connection signal="pressed" from="PanelPrincipal/BotonSalir" to="." method="_on_boton_salir_pressed"]

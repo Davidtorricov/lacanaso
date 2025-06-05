@@ -1,0 +1,125 @@
+[gd_scene load_steps=4 format=3 uid="uid://y8tc7y0qodp1"]
+
+[ext_resource type="Theme" uid="uid://eg00aabwon5u" path="res://assets/themes/heme_global.tres" id="1_2lsl7"]
+[ext_resource type="Script" uid="uid://kc85cfix0kda" path="res://scripts/inicio.gd" id="2_um1oo"]
+[ext_resource type="Texture2D" uid="uid://cprscspwn2fdl" path="res://assets/PANTALLAPRINCIPAL.png" id="3_ic3wg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_2lsl7")
+script = ExtResource("2_um1oo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 2662.0
+offset_bottom = 1512.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ic3wg")
+
+[node name="MenuBotones" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 492.0
+offset_right = 789.0
+offset_bottom = 803.0
+
+[node name="BotonPlay" type="Button" parent="MenuBotones"]
+layout_mode = 2
+text = "\"jugar”"
+
+[node name="BotonInstrucciones" type="Button" parent="MenuBotones"]
+layout_mode = 2
+text = "“Instrucciones”"
+
+[node name="BotonOpciones" type="Button" parent="MenuBotones"]
+layout_mode = 2
+text = "“Opciones”"
+
+[node name="BotonSalir" type="Button" parent="MenuBotones"]
+layout_mode = 2
+text = "“Salir”"
+
+[node name="PopupInstrucciones" type="PopupPanel" parent="."]
+initial_position = 2
+size = Vector2i(603, 188)
+
+[node name="ContenedorInstrucciones" type="VBoxContainer" parent="PopupInstrucciones"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 599.0
+offset_bottom = 184.0
+
+[node name="Label" type="Label" parent="PopupInstrucciones/ContenedorInstrucciones"]
+layout_mode = 2
+text = "Bienvenido a LACANASO
+
+El objetivo es acercarte a 21 sin pasarte.
+Puedes:
+- Pedir carta para sumar puntos
+- Plantarte si crees que vas a ganar
+
+¡Buena suerte!
+"
+
+[node name="Buttonsalirinst" type="Button" parent="PopupInstrucciones/ContenedorInstrucciones/Label"]
+layout_mode = 0
+offset_left = 557.0
+offset_top = -2.0
+offset_right = 597.0
+offset_bottom = 35.0
+text = "x"
+
+[node name="PopupOpciones" type="PopupPanel" parent="."]
+initial_position = 2
+size = Vector2i(448, 130)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupOpciones"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 444.0
+offset_bottom = 126.0
+
+[node name="Label" type="Label" parent="PopupOpciones/VBoxContainer"]
+layout_mode = 2
+text = "
+
+         \"Volumen general\""
+
+[node name="Buttonsaliropc" type="Button" parent="PopupOpciones/VBoxContainer/Label"]
+layout_mode = 0
+offset_left = 351.0
+offset_top = -15.0
+offset_right = 507.0
+offset_bottom = 31.0
+text = "x"
+
+[node name="SliderVolumen" type="HSlider" parent="PopupOpciones/VBoxContainer"]
+layout_mode = 2
+value = 100.0
+
+[node name="muscil" type="Label" parent="PopupOpciones/VBoxContainer"]
+layout_mode = 2
+text = "\"Música\""
+
+[node name="CheckMusica" type="CheckButton" parent="PopupOpciones/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "\"Activar música\""
+
+[node name="MusicaMenu" type="AudioStreamPlayer" parent="."]
+autoplay = true
+bus = &"Música"
+
+[connection signal="pressed" from="MenuBotones/BotonPlay" to="." method="_on_boton_play_pressed"]
+[connection signal="pressed" from="MenuBotones/BotonInstrucciones" to="." method="_on_boton_instrucciones_pressed"]
+[connection signal="pressed" from="MenuBotones/BotonOpciones" to="." method="_on_boton_opciones_pressed"]
+[connection signal="pressed" from="MenuBotones/BotonSalir" to="." method="_on_boton_salir_pressed"]
+[connection signal="pressed" from="PopupInstrucciones/ContenedorInstrucciones/Label/Buttonsalirinst" to="." method="_on_buttonsalirinst_pressed"]
+[connection signal="pressed" from="PopupOpciones/VBoxContainer/Label/Buttonsaliropc" to="." method="_on_buttonsaliropc_pressed"]
+[connection signal="value_changed" from="PopupOpciones/VBoxContainer/SliderVolumen" to="." method="_on_slider_volumen_value_changed"]
+[connection signal="toggled" from="PopupOpciones/VBoxContainer/CheckMusica" to="." method="_on_check_musica_toggled"]
