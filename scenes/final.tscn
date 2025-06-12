@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dqlbjb0bxbg64"]
 
 [ext_resource type="Script" uid="uid://b3r23041bl12k" path="res://scripts/final.gd" id="1_op64y"]
-[ext_resource type="Texture2D" uid="uid://bd4xgkru3r4m4" path="res://assets/37fac693-67cc-45bb-a0c8-8b762c921273.png" id="2_gh6hq"]
+[ext_resource type="Texture2D" uid="uid://bd4xgkru3r4m4" path="res://assets/fn.png" id="2_gh6hq"]
 [ext_resource type="Theme" uid="uid://eg00aabwon5u" path="res://assets/themes/heme_global.tres" id="3_y0die"]
 
 [node name="control" type="CanvasLayer"]

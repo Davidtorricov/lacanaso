@@ -1,6 +1,5 @@
 extends Control
 
-# Este código se coloca en la escena de menú principal (cuando inicias una nueva partida)
 
 func _on_boton_play_pressed() -> void:
 	# Restablecer los valores globales en GameState

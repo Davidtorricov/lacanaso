@@ -2,10 +2,10 @@
 
 [ext_resource type="Theme" uid="uid://eg00aabwon5u" path="res://assets/themes/heme_global.tres" id="1_db1vg"]
 [ext_resource type="Script" uid="uid://jcalvagxc715" path="res://scripts/shop_2.gd" id="2_db1vg"]
-[ext_resource type="Texture2D" uid="uid://bqrie57iacrpo" path="res://assets/5d73e619-7e29-4a06-b5d7-224f8fbfcc52.png" id="3_hl8hd"]
-[ext_resource type="Texture2D" uid="uid://cnh41tsf3b2tb" path="res://assets/ChatGPT Image 4 jun 2025, 12_21_18 p.m..png" id="4_f1r6x"]
-[ext_resource type="Texture2D" uid="uid://btamench2oddq" path="res://assets/ChatGPT Image 4 jun 2025, 12_21_23 p.m..png" id="5_uk63h"]
-[ext_resource type="Texture2D" uid="uid://dvpvkix51scnh" path="res://assets/830e95cf-d4bd-47e0-87dc-00aeb0629060.png" id="6_dtdnd"]
+[ext_resource type="Texture2D" uid="uid://bqrie57iacrpo" path="res://assets/f3.png" id="3_hl8hd"]
+[ext_resource type="Texture2D" uid="uid://cnh41tsf3b2tb" path="res://assets/vida.png" id="4_f1r6x"]
+[ext_resource type="Texture2D" uid="uid://btamench2oddq" path="res://assets/x2.png" id="5_uk63h"]
+[ext_resource type="Texture2D" uid="uid://dvpvkix51scnh" path="res://assets/escudo.png" id="6_dtdnd"]
 
 [node name="Node" type="Control"]
 layout_mode = 3

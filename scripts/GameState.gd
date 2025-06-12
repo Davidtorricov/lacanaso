@@ -1,7 +1,7 @@
 extends Node
 
 # —————————————————————————————————————————————
-#  VARIABLES GLOBALES (ahora son contadores, no simples booleanos)
+#  VARIABLES GLOBALES 
 # —————————————————————————————————————————————
 var vida_jugador : int = 100    # Vida actual del jugador
 var fichas_jugador : int = 100  # Fichas actuales

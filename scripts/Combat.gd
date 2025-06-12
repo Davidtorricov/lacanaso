@@ -1,8 +1,5 @@
 extends Control
 
-# ——————————————————————————————————————
-#  NODOS (asegúrate de que existan en tu escena):
-# ——————————————————————————————————————
 @onready var cont_jugador    := $UI/ZonaJugador/CartasJugador
 @onready var cont_enemigo    := $UI/ZonaEnemigo/CartasEnemigo
 @onready var boton_pedir     := $UI/BotonesJuego/BotonPedir
@@ -13,9 +10,9 @@ extends Control
 @onready var fichas_label    := $UI/InfoJugador/Overlay/FichasLabel
 @onready var vida_label_e    := $UI/InfoEnemigo/Overlay/VidaLabel
 
-# ——————————————————————————————————————
+
 #  ESTADO DEL JUEGO (usando GameState para vida y fichas)
-# ——————————————————————————————————————
+
 var vida_enemigo   : int = 80
 
 var mazo_jugador  : Array = []
@@ -34,19 +31,19 @@ func _ready() -> void:
 	# Cargar vida y fichas desde el singleton global GameState
 	_update_ui()
 
-# ——————————————————————————————————————
+
 #  INICIALIZACIÓN
 # ——————————————————————————————————————
 func _inicializar_mazos() -> void:
 	for i in range(1, 14):
 		var valor = i
 		if i == 1:
-			valor = 11  # As puede ser 11 (ajustaremos en el cálculo)
+			valor = 11  # podemos ajustar los valores de a j q k
 		elif i >= 11:
-			valor = 10  # J, Q, K valen 10
+			valor = 10 
 		mazo_jugador.append({
 			"valor": valor,
-			"imagen": "res://assets/cards/diamonds/diamond_" + str(i) + ".png"
+			"imagen": "res://assets/cards/diamonds/diamond_" + str(i) + ".png"  # se llama las cartaas con un string de el bucle para el valor 
 		})
 		mazo_enemigo.append({
 			"valor": valor,
@@ -57,7 +54,7 @@ func _inicializar_mazos() -> void:
 	mazo_enemigo.shuffle()
 
 func _reiniciar_ronda() -> void:
-	# Limpia manos y contenedores
+	# Limpia manos 
 	mano_jug.clear()
 	mano_ene.clear()
 	for c in cont_jugador.get_children(): c.queue_free()
@@ -73,7 +70,7 @@ func _reiniciar_ronda() -> void:
 	_dar_carta(false)
 	_update_ui()
 
-# ——————————————————————————————————————
+#
 #  REPARTO DE CARTAS
 # ——————————————————————————————————————
 func _dar_carta(es_jug: bool) -> void:
